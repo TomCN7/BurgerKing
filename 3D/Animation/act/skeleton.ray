@@ -1,0 +1,352 @@
+#camera
+   -1.134 1.645 3.996
+   0.449492 -0.253421 -0.856583
+   0.082048 0.966573 -0.242909
+   0.523
+#ambient
+   0.2 0.2 0.2
+#light_num
+   2
+#light_point
+  1 1 1
+  -10 10 10
+  1 0 0
+#light_dir
+  0.6 0.6 0.6
+  0 0 1
+#ray_file_num
+   18
+#ray_file
+   ../ray/skeleton/pelvis.ray
+#ray_file
+   ../ray/skeleton/r_leg_upp.ray
+#ray_file
+   ../ray/skeleton/r_leg_low.ray
+#ray_file
+   ../ray/skeleton/r_foot.ray
+#ray_file
+   ../ray/skeleton/ribs.ray
+#ray_file
+    ../ray/skeleton/l_shoulder.ray
+#ray_file
+   ../ray/skeleton/r_arm_upp.ray
+#ray_file
+   ../ray/skeleton/r_arm_low.ray
+#ray_file
+   ../ray/skeleton/r_hand.ray
+#ray_file
+   ../ray/skeleton/r_shoulder.ray
+#ray_file
+   ../ray/skeleton/neck.ray
+#ray_file
+   ../ray/skeleton/skull.ray
+#ray_file
+   ../ray/skeleton/l_leg_upp.ray
+#ray_file
+   ../ray/skeleton/l_leg_low.ray
+#ray_file
+   ../ray/skeleton/l_foot.ray
+#ray_file
+   ../ray/skeleton/l_arm_upp.ray
+#ray_file
+   ../ray/skeleton/l_arm_low.ray
+#ray_file
+   ../ray/skeleton/l_hand.ray
+#key_file
+   ../key/juggleball01.key
+#joint_begin
+  TranslateX
+  ROOT_NATURAL--XT
+  #joint_begin
+    TranslateY
+    ROOT_NATURAL--YT
+    #joint_begin
+      TranslateZ
+      ROOT_NATURAL--ZT
+      #joint_begin
+        RotateY
+        ROOT_NATURAL--YR
+        #joint_begin
+          RotateZ
+          ROOT_NATURAL--ZR
+          #joint_begin
+            RotateX
+            ROOT_NATURAL--XR
+            #ray_file_instance 0
+            #group_begin
+              1 0 0 0
+              0 1 0 0.160202
+              0 0 1 -0.0265675
+              0 0 0 1
+              #joint_begin
+                RotateZ
+                Chest--ZR
+                #joint_begin
+                  RotateX
+                  Chest--XR
+                  #joint_begin
+                    RotateY
+                    Chest--YR
+                    #ray_file_instance 4
+                    #group_begin
+                      1 0 0 0
+                      0 1 0 0.412859
+                      0 0 1 0
+                      0 0 0 1
+                      #joint_begin
+                        RotateZ
+                        Neck--ZR
+                        #joint_begin
+                          RotateX
+                          Neck--XR
+                          #joint_begin
+                            RotateY
+                            Neck--YR
+                            #ray_file_instance 10
+                            #group_begin
+                              1 0 0 0
+                              0 1 0 0.0844846
+                              0 0 1 0
+                              0 0 0 1
+                              #joint_begin
+                                RotateZ
+                                Head--ZR
+                                #joint_begin
+                                  RotateX
+                                  Head--XR
+                                  #ray_file_instance 11
+                                #joint_end
+                              #joint_end
+                            #group_end
+                          #joint_end
+                        #joint_end
+                      #joint_end
+                    #group_end
+                    #group_begin
+                      1 0 0 -0.0185972
+                      0 1 0 0.351754
+                      0 0 1 -0.0270988
+                      0 0 0 1
+                      #joint_begin
+                        RotateZ
+                        RightCollar--ZR
+                        #joint_begin
+                          RotateY
+                          RightCollar--YR
+                          #ray_file_instance 9
+                          #group_begin
+                            1 0 0 -0.193124
+                            0 1 0 0
+                            0 0 1 0
+                            0 0 0 1
+                            #joint_begin
+                              RotateZ
+                              RightShoulder--ZR
+                              #joint_begin
+                                RotateX
+                                RightShoulder--XR
+                                #joint_begin
+                                  RotateY
+                                  RightShoulder--YR
+                                  #ray_file_instance 6
+                                  #group_begin
+                                    1 0 0 0
+                                    0 1 0 -0.335813
+                                    0 0 1 0
+                                    0 0 0 1
+                                    #joint_begin
+                                      RotateX
+                                      RightElbow--XR
+                                      #joint_begin
+                                        RotateY
+                                        RightElbow--YR
+                                        #ray_file_instance 7
+                                        #group_begin
+                                          1 0 0 -0.05
+                                          0 1 0 -0.45
+                                          0 0 1 0.05
+                                          0 0 0 1
+                                          #joint_begin
+                                            RotateZ
+                                            RightWrist--ZR
+                                            #joint_begin
+                                              RotateX
+                                              RightWrist--XR
+                                              #ray_file_instance 8
+                                            #joint_end
+                                          #joint_end
+                                        #group_end
+                                      #joint_end
+                                    #joint_end
+                                  #group_end
+                                #joint_end
+                              #joint_end
+                            #joint_end
+                          #group_end
+                        #joint_end
+                      #joint_end
+                    #group_end
+                    #group_begin
+                      1 0 0 0.0185972
+                      0 1 0 0.351754
+                      0 0 1 -0.0270988
+                      0 0 0 1
+                      #joint_begin
+                        RotateZ
+                        LeftCollar--ZR
+                        #joint_begin
+                          RotateY
+                          LeftCollar--YR
+                          #ray_file_instance 5
+                          #group_begin
+                            1 0 0 0.193124
+                            0 1 0 0
+                            0 0 1 0
+                            0 0 0 1
+                            #joint_begin
+                              RotateZ
+                              LeftShoulder--ZR
+                              #joint_begin
+                                RotateX
+                                LeftShoulder--XR
+                                #joint_begin
+                                  RotateY
+                                  LeftShoulder--YR
+                                  #ray_file_instance 15
+                                  #group_begin
+                                    1 0 0 0
+                                    0 1 0 -0.335813
+                                    0 0 1 0
+                                    0 0 0 1
+                                    #joint_begin
+                                      RotateX
+                                      LeftElbow--XR
+                                      #joint_begin
+                                        RotateY
+                                        LeftElbow--YR
+                                        #ray_file_instance 16
+                                        #group_begin
+                                          1 0 0 0.05
+                                          0 1 0 -0.45
+                                          0 0 1 0.05
+                                          0 0 0 1
+                                          #joint_begin
+                                            RotateZ
+                                            LeftWrist--ZR
+                                            #joint_begin
+                                              RotateX
+                                              LeftWrist--XR
+                                              #ray_file_instance 17
+                                            #joint_end
+                                          #joint_end
+                                        #group_end
+                                      #joint_end
+                                    #joint_end
+                                  #group_end
+                                #joint_end
+                              #joint_end
+                            #joint_end
+                          #group_end
+                        #joint_end
+                      #joint_end
+                    #group_end
+                  #joint_end
+                #joint_end
+              #joint_end
+            #group_end
+            #group_begin
+              1 0 0 -0.0690755
+              0 1 0 0
+              0 0 1 0
+              0 0 0 1
+              #joint_begin
+                RotateZ
+                RightHip--ZR
+                #joint_begin
+                  RotateX
+                  RightHip--XR
+                  #joint_begin
+                    RotateY
+                    RightHip--YR
+                    #ray_file_instance 1
+                    #group_begin
+                      1 0 0 0
+                      0 1 0 -0.451913
+                      0 0 1 0
+                      0 0 0 1
+                      #joint_begin
+                        RotateX
+                        RightKnee--XR
+                        #ray_file_instance 2
+                        #group_begin
+                          1 0 0 0
+                          0 1 0 -0.476089
+                          0 0 1 0
+                          0 0 0 1
+                          #joint_begin
+                            RotateZ
+                            RightAnkle--ZR
+                            #joint_begin
+                              RotateX
+                              RightAnkle--XR
+                              #ray_file_instance 3
+                            #joint_end
+                          #joint_end
+                        #group_end
+                      #joint_end
+                    #group_end
+                  #joint_end
+                #joint_end
+              #joint_end
+            #group_end
+            #group_begin
+              1 0 0 0.0690755
+              0 1 0 0
+              0 0 1 0
+              0 0 0 1
+              #joint_begin
+                RotateZ
+                LeftHip--ZR
+                #joint_begin
+                  RotateX
+                  LeftHip--XR
+                  #joint_begin
+                    RotateY
+                    LeftHip--YR
+                    #ray_file_instance 12
+                    #group_begin
+                      1 0 0 0
+                      0 1 0 -0.51913
+                      0 0 1 0
+                      0 0 0 1
+                      #joint_begin
+                        RotateX
+                        LeftKnee--XR
+                        #ray_file_instance 13
+                        #group_begin
+                          1 0 0 0
+                          0 1 0 -0.476089
+                          0 0 1 0
+                          0 0 0 1
+                          #joint_begin
+                            RotateZ
+                            LeftAnkle--ZR
+                            #joint_begin
+                              RotateX
+                              LeftAnkle--XR
+                              #ray_file_instance 14
+                            #joint_end
+                          #joint_end
+                        #group_end
+                      #joint_end
+                    #group_end
+                  #joint_end
+                #joint_end
+              #joint_end
+            #group_end
+          #joint_end
+        #joint_end
+      #joint_end
+    #joint_end
+  #joint_end
+#joint_end

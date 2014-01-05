@@ -1,0 +1,30 @@
+#camera
+   -1.134 1.645 3.996
+   0.449492 -0.253421 -0.856583
+   0.082048 0.966573 -0.242909
+   0.523
+#ambient
+   0.2 0.2 0.2
+#light_num
+   2
+#light_point
+  1 1 1
+  -10 10 10
+  1 0 0
+#light_dir
+  0.6 0.6 0.6
+  0 0 1
+#ray_file_num
+   2
+#ray_file
+   muscle_fist.ray
+#ray_file
+   muscle_dance.ray
+#group_begin
+   1.0 0.0 0.0 1.0
+   0.0 1.0 0.0 0.0
+   0.0 0.0 1.0 0.0
+   0.0 0.0 0.0 1.0
+   #ray_file_instance 0
+#group_end
+#ray_file_instance 1
