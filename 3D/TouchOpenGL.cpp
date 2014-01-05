@@ -10,6 +10,7 @@ typedef unsigned char BYTE;
 // // If you want specific Apple functionality, look up AGL
 
 GLuint g_texture = 0;
+float theta = .0f;
 
 void init() // called before main loop to set up the program
 {
@@ -96,7 +97,7 @@ void display()
 	glBindTexture( GL_TEXTURE_2D, g_texture );
 
 	glPushMatrix();
-	glRotatef( .0f, 0.0f, 0.0f, 1.0f );
+	glRotatef( theta, 0.0f, 0.0f, 1.0f );
 	glBegin( GL_QUADS );
 	glTexCoord2d(0.0,0.0); 
 	glVertex2d(-1.0,-1.0);
@@ -108,6 +109,8 @@ void display()
 	glVertex2d(-1.0,+1.0);
 	glEnd();
 	glPopMatrix();
+
+	theta += 1.0f;
 
 	glutSwapBuffers();
 }
