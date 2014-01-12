@@ -16,28 +16,28 @@
  * in the scene. */
 
 class Camera {
- public:
-  Flt heightAngle;
-  Flt aspectRatio;
-  Point3D position;
-  Point3D direction;
-  Point3D up;
-  Point3D right;
+	public:
+		Flt heightAngle;
+		Flt aspectRatio;
+		Point3D position;
+		Point3D direction;
+		Point3D up;
+		Point3D right;
 
-  int read(FILE* fp);
-  void write(FILE* fp=stdout);
+		int read(FILE* fp);
+		void write(FILE* fp=stdout);
 };
 
 /* This class stores information about a vertex that is used by the 
  * triangles in the scene. */
 class Vertex {
- public:
-  int index;
-  Point3D position;
-  Point3D normal;
-  Point2D texCoordinate;
-  int read(FILE* fp);
-  void write(FILE* fp=stdout);
+	public:
+		int index;
+		Point3D position;
+		Point3D normal;
+		Point2D texCoordinate;
+		int read(FILE* fp);
+		void write(FILE* fp=stdout);
 };
 
 
@@ -45,56 +45,56 @@ class Vertex {
  * scene. (This includes a pointer to a Texture if the Shape is to be
  * texture mapped.)*/
 class Material {
- public:
-  int index;
-  Point3D ambient;
-  Point3D diffuse;
-  Point3D specular;
-  Point3D emissive;
-  Flt kspec;
-  Flt ktran;
-  Flt refind;
-  GLuint handle;
-  class Texture *tex;
-  char foo[FOO_STRING_BUF_SIZE];
+	public:
+		int index;
+		Point3D ambient;
+		Point3D diffuse;
+		Point3D specular;
+		Point3D emissive;
+		Flt kspec;
+		Flt ktran;
+		Flt refind;
+		GLuint handle;
+		class Texture *tex;
+		char foo[FOO_STRING_BUF_SIZE];
 
-  Material(void);
-  Material(int index,Point3D ambient,Point3D color,Flt kspec);
-  void setHandle(void);
-  int read(FILE* fp,int& textureIndex);
-  void write(FILE* fp=stdout);
+		Material(void);
+		Material(int index,Point3D ambient,Point3D color,Flt kspec);
+		void setHandle(void);
+		int read(FILE* fp,int& textureIndex);
+		void write(FILE* fp=stdout);
 };
 
 /* This class stores information about a texture used to texture-map Shapes 
  * in the scene. */
 
 class Texture{
- public:
-  int index;
-  GLuint handle;
-  char filename[TEX_FNAME_BUF_SIZE];
-  Image *img;
+	public:
+		int index;
+		GLuint handle;
+		char filename[TEX_FNAME_BUF_SIZE];
+		Image *img;
 
 
-  Texture(void);
-  ~Texture(void);
-  void setHandle(void);
-  int read(FILE* fp);
-  void write(FILE* fp=stdout);
+		Texture(void);
+		~Texture(void);
+		void setHandle(void);
+		int read(FILE* fp);
+		void write(FILE* fp=stdout);
 };
 
 /* This class stores information about the scene-graph read out from a .ray
  * file. */
 
 class RayFile{
- public:
-  int index;
-  char filename[FILE_NAME_SIZE];
-  class Scene* scene;
+	public:
+		int index;
+		char filename[FILE_NAME_SIZE];
+		class Scene* scene;
 
-  ~RayFile(void);
-  int read(FILE* fp);
-  void write(FILE* fp=stdout);
+		~RayFile(void);
+		int read(FILE* fp);
+		void write(FILE* fp=stdout);
 };
 
 /* This class provides access to everything described in the .ray file and
@@ -113,12 +113,12 @@ class Scene{
 	void ParseError(const char *, const char *);
 	void ParseLineError(int ,const char*, const char *);
 	void ParseGroup(FILE* fp,int& cmndCtr,Group* current,
-		const char* fileName);
+			const char* fileName);
 	void ParseJoint(FILE* fp,int& cmndCtr,Group* current,
-		const char* fileName);
+			const char* fileName);
 	int  ParseShape(FILE* fp,const char* keyword,int cmndCtr,
-		Group* current,const char* fileName);
-public:
+			Group* current,const char* fileName);
+	public:
 	Point3D ambient;
 	Point3D background;
 	Camera* camera;
@@ -142,5 +142,5 @@ public:
 };
 
 #endif /* SCENE_INCLUDED */
-  
+
 

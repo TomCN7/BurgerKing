@@ -25,71 +25,71 @@ typedef double Flt;
  * should print out "1.0" */
 
 class Point2D{
-  Flt p[2];
- public:
-  Point2D(){p[0]=p[1]=0.0;}
-  Point2D(Flt x,Flt y){p[0]=x;p[1]=y;}
+	Flt p[2];
+	public:
+	Point2D(){p[0]=p[1]=0.0;}
+	Point2D(Flt x,Flt y){p[0]=x;p[1]=y;}
 
-  Flt& operator[] (int index);
+	Flt& operator[] (int index);
 
-  void print(){printf("(%f,%f)",p[0],p[1]);}
-  void printnl(){print();printf("\n");}
+	void print(){printf("(%f,%f)",p[0],p[1]);}
+	void printnl(){print();printf("\n");}
 
-  Flt dot(Point2D pt);
+	Flt dot(Point2D pt);
 
-  Flt length(void);
+	Flt length(void);
 
-  Point2D unit(void);
+	Point2D unit(void);
 
-  Point2D negate(void);
-  Point2D operator- (void);
+	Point2D negate(void);
+	Point2D operator- (void);
 
-  Point2D scale(Flt scl);
-  Point2D operator* (Flt scale);
-  Point2D operator/ (Flt scale);
+	Point2D scale(Flt scl);
+	Point2D operator* (Flt scale);
+	Point2D operator/ (Flt scale);
 
-  Point2D add(Point2D pt);
-  Point2D operator+ (Point2D pt);
+	Point2D add(Point2D pt);
+	Point2D operator+ (Point2D pt);
 
-  Point2D subtract(Point2D pt);
-  Point2D operator- (Point2D pt);
+	Point2D subtract(Point2D pt);
+	Point2D operator- (Point2D pt);
 
-  Point2D mult(Point2D pt);
+	Point2D mult(Point2D pt);
 };
 
 class Point3D{
-  Flt p[3];
- public:
-  Point3D(){p[0]=p[1]=p[2]=0;}
-  Point3D(Flt x,Flt y,Flt z){p[0]=x;p[1]=y;p[2]=z;}
+	Flt p[3];
+	public:
+	Point3D(){p[0]=p[1]=p[2]=0;}
+	Point3D(Flt x,Flt y,Flt z){p[0]=x;p[1]=y;p[2]=z;}
 
-  Flt& operator[] (int index);
+	Flt& operator[] (int index);
 
-  void print(void){printf("(%f,%f,%f)",p[0],p[1],p[2]);}
-  void printnl(void){print();printf("\n");}
+	void print(void){printf("(%f,%f,%f)",p[0],p[1],p[2]);}
+	void printnl(void){print();printf("\n");}
 
-  Flt dot(Point3D pt);
+	Flt dot(Point3D pt);
 
-  Flt length(void);
+	Flt length(void);
 
-  Point3D unit(void);
+	Point3D unit(void);
 
-  Point3D negate(void);
-  Point3D operator- (void);
+	Point3D negate(void);
+	Point3D operator- (void);
 
-  Point3D scale(Flt);
-  Point3D operator* (Flt scale);
-  Point3D operator/ (Flt scale);
+	Point3D scale(Flt);
+	Point3D operator* (Flt scale);
+	Point3D operator/ (Flt scale);
 
-  Point3D add(Point3D pt);
-  Point3D operator+ (Point3D pt);
+	Point3D add(Point3D pt);
+	Point3D operator+ (Point3D pt);
 
-  Point3D subtract(Point3D pt);
-  Point3D operator- (Point3D pt);
+	Point3D subtract(Point3D pt);
+	Point3D operator- (Point3D pt);
 
-  Point3D crossProduct(Point3D pt);
+	Point3D crossProduct(Point3D pt);
 
-  Point3D mult(Point3D pt);
+	Point3D mult(Point3D pt);
 };
 
 /* A ray is a directed line segment which is defined by a pair of 3D
@@ -105,20 +105,20 @@ class Point3D{
  * but they may help.) */
 
 class Ray{
- public:
-  Point3D p;
-  Point3D d;
+	public:
+		Point3D p;
+		Point3D d;
 
-  Ray(){;}
-  Ray(Point3D p1,Point3D d1){p=p1;d=d1;}
+		Ray(){;}
+		Ray(Point3D p1,Point3D d1){p=p1;d=d1;}
 
-  void print(void){p.print();printf(":");d.print();}
-  void printnl(void){print();printf("\n");}
+		void print(void){p.print();printf(":");d.print();}
+		void printnl(void){print();printf("\n");}
 
-  Ray translate(Point3D pt);
+		Ray translate(Point3D pt);
 
-  Point3D operator() (Flt param);
-  Point3D position(Flt param);
+		Point3D operator() (Flt param);
+		Point3D position(Flt param);
 };
 
 /* The Matrix class is a 4x4 matrix and supports: taking of determinant,
@@ -147,32 +147,32 @@ class Ray{
 
 /* Indexed via Matrix(col,row)*/
 class Matrix{
-  Flt subDet(int col1,int row1,int col2,int row2);
-  Flt subDet(int col,int row);
-  Flt m[4][4];
- public:
-  Flt& operator() (int col,int row);
+	Flt subDet(int col1,int row1,int col2,int row2);
+	Flt subDet(int col,int row);
+	Flt m[4][4];
+	public:
+	Flt& operator() (int col,int row);
 
-  Flt det(void);
+	Flt det(void);
 
-  void print(void);
-  void printnl(void){print();printf("\n");}
+	void print(void);
+	void printnl(void){print();printf("\n");}
 
-  Matrix mult(Matrix m);
-  Matrix operator* (Matrix m);
+	Matrix mult(Matrix m);
+	Matrix operator* (Matrix m);
 
-  Matrix transpose(void);
+	Matrix transpose(void);
 
-  Matrix invert(void);
+	Matrix invert(void);
 
-  Point3D multPosition(Point3D position);
-  Point3D multDirection(Point3D direction);
-  Point3D multNormal(Point3D normal);
+	Point3D multPosition(Point3D position);
+	Point3D multDirection(Point3D direction);
+	Point3D multNormal(Point3D normal);
 
-  Ray mult(Ray ray);
-  Ray operator* (Ray ray);
+	Ray mult(Ray ray);
+	Ray operator* (Ray ray);
 
-  int isIdentity(void);
+	int isIdentity(void);
 };
 Matrix IdentityMatrix(void);
 #endif /* GEOMETRY_INCLUDED */

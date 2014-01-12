@@ -9,18 +9,18 @@
  * strength of attenuation. */
 
 class PointLight : public Light{
- public:
-  Point3D location;
-  Flt constAtten;
-  Flt linearAtten;
-  Flt quadAtten;		
+	public:
+		Point3D location;
+		Flt constAtten;
+		Flt linearAtten;
+		Flt quadAtten;		
 
-  int read(FILE* fp);
-  void write(FILE* fp=stdout);
+		int read(FILE* fp);
+		void write(FILE* fp=stdout);
 
-  void draw(int lightNum);
+		void draw(int lightNum);
 };
 
 #endif /* POINT_LIGHT_INCLUDED */
-  
+
 

@@ -12,16 +12,16 @@
  * corresponding methods in the scene-graph pointed to. */
 
 class RayFileInstance : public Shape {
-  RayFile* rayFile;
- public:
-  RayFileInstance(RayFile* rayFile);
+	RayFile* rayFile;
+	public:
+	RayFileInstance(RayFile* rayFile);
 
-  char* name(void);
+	char* name(void);
 
-  void write(int indent,FILE* fp=stdout);
+	void write(int indent,FILE* fp=stdout);
 
-  void draw(int complexity);
+	void draw(int complexity);
 };
 
 #endif /* RAY_FILE_INSTANCE_INCLUDED */
-  
+
